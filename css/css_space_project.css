@@ -1,0 +1,245 @@
+body {
+    background-image: url(../img/blackBackground.jpg);
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 900 !important;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 900 !important;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: orange;
+}
+
+#navigation {
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    
+}
+
+#navigation li {
+    display: inline;
+    float: left;
+}
+
+#navigation li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
+
+li {
+    font-size: 18px;
+    padding-right: 3px;
+    font-weight: 900 !important;
+}
+
+.home {
+    margin-left: 600px;
+}
+
+.selected {
+    margin-left: 300px;
+    font-size: 25px;
+    margin-top: 4px
+}
+
+#homePage {
+    margin-left: 751px;
+}
+.button {
+    background-color: transparent;
+    border-style: solid;
+    border-color: orange;
+    border-width: 2px;
+    border-radius: 500px;
+    color: white;
+    width: 100px;
+    font-size: 15px;
+}
+
+/* Transport System Interface */
+
+
+#shipControls {
+    position: absolute;
+    border-radius: 500px;
+    height: 540px;
+    width: 540px;
+    border-style: solid;
+    border-color: orange;
+    border-width: 4px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 180px;
+}
+
+#shipInformation {
+    position: absolute;
+    border-radius: 40px;
+    height: 600px;
+    width: 750px;
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    color: white;
+    margin-left: 575px;
+    margin-top: 150px;      
+}
+
+
+#shipEnvironment {
+    position: absolute;
+    border-radius: 500px;
+    height: 540px;
+    width: 540px;
+    border-style: solid;
+    border-color: orange;
+    border-width: 4px;
+    color: white;
+    margin-left: 1350px;
+    margin-top: 180px;  
+}
+
+#redButton {
+  width: 70px;
+  
+}
+
+#lsInterface {
+    text-align: left;
+}
+
+#lsGetReady {
+    text-align: left;
+}
+
+/* Clock Page */
+
+#homeClock {
+    margin-left: 655px;
+}
+
+#clock {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 400px;
+    width: 400px;
+    font-size: 25px;
+    font-weight: 900 !important; 
+    border-style: solid;
+    border-left-color: #66FF66;
+    border-top-color: aqua;
+    border-right-color: #FF9933;
+    border-bottom-color: #FFFF66;
+    border-width: 4px;
+    border-radius: 500px;
+    animation-name: none;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes pulseClock {
+    0% {border-left-color: #66FF66; border-top-color: aqua;
+    border-right-color: #FF9933;
+    border-bottom-color: #FFFF66;}
+    25% {border-left-color: #FFFF66; border-top-color: #66FF66;
+    border-right-color: aqua;
+    border-bottom-color: #FF9933;}
+    50% {border-left-color: #FF9933; border-top-color: #FFFF66;
+    border-right-color: #66FF66;
+    border-bottom-color: aqua;}
+    75% {border-left-color: aqua; border-top-color: #FF9933;
+    border-right-color: #FFFF66;
+    border-bottom-color: #66FF66;}
+    100% {border-left-color: #66FF66; border-top-color: aqua;
+    border-right-color: #FF9933;
+    border-bottom-color: #FFFF66;}
+}
+
+#star {
+    width: 70px;
+    height: 70px;
+}
+
+#earthDate {
+    margin-top: 12px
+}
+
+#informationClock {
+    font-size: 18px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 1320px;
+    font-weight: 900 !important; 
+    border-style: solid;
+    border-width: 4px;
+    
+}
+
+#imageEarth {
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+#imageMars {
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+
+#iconMercury, #iconVenus, #iconEarth, #iconMoon, #iconMars, #iconMoon, #iconJupiter, #iconSaturn, #iconUranus, #iconNeptune, #iconPluto {
+    -webkit-transition: 1.5s ease-in-out;
+    -moz-transition: 1.5s ease-in-out;
+    -o-transition: 1.5s ease-in-out;
+    transition: 1.5s ease-in-out;
+    
+}
+
+#iconMercury:hover, #iconVenus:hover, #iconEarth:hover, #iconMoon:hover, #iconMars:hover, #iconJupiter:hover, #iconSaturn:hover, #iconUranus:hover, #iconNeptune:hover, #iconPluto:hover {
+     -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
