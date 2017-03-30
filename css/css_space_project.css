@@ -12,7 +12,7 @@ h1 {
 
 h2 {
   font-size: 22px;
-  font-weight: 900 !important;
+  font-weight: 900;
 }
 
 h4 {
@@ -45,7 +45,7 @@ a:hover {
 
 #navigation li {
     display: inline;
-    float: left;
+    float: right;
 }
 
 #navigation li a {
@@ -60,19 +60,18 @@ li {
     font-weight: 900 !important;
 }
 
-.home {
-    margin-left: 600px;
-}
 
 .selected {
-    margin-left: 300px;
+    margin-left: 20px;
     font-size: 25px;
-    margin-top: 4px
+    margin-top: 4px;
+    float: left !important;
 }
 
-#homePage {
-    margin-left: 751px;
+.lastList {
+    margin-right: 35px;
 }
+
 .button {
     background-color: transparent;
     border-style: solid;
@@ -85,50 +84,70 @@ li {
 }
 
 /* Transport System Interface */
-
+#shipInterface {
+    height: 460px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 
 #shipControls {
-    position: absolute;
     border-radius: 500px;
-    height: 540px;
-    width: 540px;
+    height: 450px;
+    width: 450px;
     border-style: solid;
     border-color: orange;
     border-width: 4px;
     color: white;
-    margin-left: 10px;
-    margin-top: 180px;
+    margin-left: 30px
+}
+
+#shipControls h2 {
+    font-size: 20px;
+}
+
+#shipControls h4 {
+    font-size: 16px;
+}
+
+#shipEnvironment {
+    border-radius: 500px;
+    height: 450px;
+    width: 450px;
+    border-style: solid;
+    border-color: orange;
+    border-width: 4px;
+    color: white;
+    margin-top: -458px;
+    margin-left: 510px;
+}
+
+#shipEnvironment h2 {
+    font-size: 20px;
+}
+
+#shipEnvironment h4 {
+    font-size: 16px;
 }
 
 #shipInformation {
-    position: absolute;
-    border-radius: 40px;
-    height: 600px;
-    width: 750px;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 1300px;
+    font-weight: 900 !important; 
     border-style: solid;
-    border-color: white;
     border-width: 4px;
-    color: white;
-    margin-left: 575px;
-    margin-top: 150px;      
+    margin-top: 10px;
 }
+    
 
-
-#shipEnvironment {
-    position: absolute;
-    border-radius: 500px;
-    height: 540px;
-    width: 540px;
-    border-style: solid;
-    border-color: orange;
-    border-width: 4px;
-    color: white;
-    margin-left: 1350px;
-    margin-top: 180px;  
-}
 
 #redButton {
-  width: 70px;
+  width: 48px;
   
 }
 
@@ -142,16 +161,13 @@ li {
 
 /* Clock Page */
 
-#homeClock {
-    margin-left: 655px;
-}
+
 
 #clock {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     font-size: 25px;
     font-weight: 900 !important; 
     border-style: solid;
@@ -165,6 +181,10 @@ li {
     animation-duration: 4s;
     animation-iteration-count: infinite;
     
+}
+
+.planets {
+    width: 96px;
 }
 
 @keyframes pulseClock {
@@ -186,8 +206,8 @@ li {
 }
 
 #star {
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
 }
 
 #earthDate {
@@ -195,12 +215,12 @@ li {
 }
 
 #informationClock {
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 30px;
     margin-left: auto;
     margin-right: auto;
-    height: 300px;
-    width: 1320px;
+    height: 250px;
+    width: 1300px;
     font-weight: 900 !important; 
     border-style: solid;
     border-width: 4px;

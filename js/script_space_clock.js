@@ -29,7 +29,7 @@ var monthMars = ["Sagittarius", "Dhanus", "Capricornus", "Makara", "Aquarius", "
 
 function earthClock() {
 
-    dateOnEarth = "<br>" + "<br>" + "Earth" + "<br>" + monthNames[earthMonth] + " " + checkTime(earthDays) + " " + earthYear;
+    dateOnEarth = "<br>" + "Earth" + "<br>" + monthNames[earthMonth] + " " + checkTime(earthDays) + " " + earthYear;
     
     timeOnEarth = checkTime(earthHours) + ":" + checkTime(earthMinutes) + ":" + checkTime(earthSeconds) + "<br>";
     

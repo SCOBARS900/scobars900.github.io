@@ -10,21 +10,22 @@
  
  <body>
     <nav id="navigation"> 
-       <ul >
-       <li class="selected">Sytem Interface</li>
-       <li class="home"><a href="../index.html">Home</a></li>
-       <li><a href="transport_system.html">Sytem Interface</a></li>
+       <ul>
+       <li class="selected" id="clockTitle">Transport System</li>
+       <li class="lastList"><a href="#">Landing Spot</a></li>
        <li><a href="space_clock.html">Space Clock</a></li>
-       <li><a href="#">Landing Spot</a></li>
+       <li><a href="transport_system.html">Transport System</a></li>
+       <li><a href="../index.html">Home</a></li>
     </ul>
-   </nav>
+    </nav>
  
+    <div id="shipInterface">
     <div id="shipControls">
         <br>
         <h2>Ship Controls</h2>
         
         <a id="launch"><img id="redButton" src="../img/redButton.svg"></a>
-        
+
         <div id="lCountdown">
         <h4>Countdown: 10 sec</h4>
         </div>
@@ -43,34 +44,6 @@
         </div>    
     </div> <!-- ship controls --> 
        
-       
-    <div id="shipInformation">  
-    <div id="information">
-        <h2>Instructions</h2>
-        <p>Welcome aboard everyone, hope you enjoy this trip.</p>
-        <p>The purpose of this interface is to give information about the trip and to prepare travelers for upcoming arrival on mars.</p>
-        <h5>Interface</h5>
-        
-        <div id="lsInterface">
-        <ul>
-        <li>We will give you the honor to start the countdown. So whenever you're ready just press the red button.</li>
-        <li>If your preference of measure is miles, after launch go ahead and push the button to convert the distance into miles.</li>
-        <li>If you're not allowed do not try to change the ship's controls</li>
-        </ul>
-        </div>
-        
-        <h5>Get Ready</h5>
-        
-        <div id="lsGetReady">
-        <ul>
-        <li>If you want to know how everything started. Elon Musk in 2016 did a presentation about humans becoming multiplanetary species and of course how the human transport to Mars turned financially possible. <a href="https://www.youtube.com/watch?v=H7Uyfqi_TE8&t=6s" target="_blank">Click Here</a></li>
-        <li>Here's some additional information about Mars. <a href="https://en.wikipedia.org/wiki/Mars" target="_blank">Click Here</a></li>
-        <li>What happens to your body in space? <a href="https://www.nasa.gov/hrp/bodyinspace" target="_blank"> Click Here</a></li>
-        </ul>
-        </div>
-    </div>
-    </div> <!-- ship information -->
-       
     
     <div id="shipEnvironment">
         <br>
@@ -78,8 +51,7 @@
     
         <div id="timeToArrive">
         </div>
-        <div id="cLocation">
-        </div>
+        
         
 
         <div id="distanceT">
@@ -88,6 +60,8 @@
         </div>
         <button class="button" id="convertK">Km to Miles</button>
         <button class="button" id="convertM">Miles to Km</button>
+        <div id="cLocation">
+        </div>
           
         <div id="atmosphere">
         </div>
@@ -100,8 +74,23 @@
          <div id="water">
          </div>
     </div> <!-- shipEnvironment -->
+    </div> <!-- shipInterface -->
        
-    
+     <div id="shipInformation">  
+    <div id="information">
+        <h3>Information and Instructions</h3>
+        <ul>
+            <li>The purpose of this interface is to give information about the trip and to prepare travelers for upcoming arrival on mars.</li>
+            <li>We will give you the honor to start the countdown. So whenever you're ready just press the red button.</li>
+            <li>If your preference of measure is miles, after launch go ahead and push the button to convert the distance into miles.</li>
+            <li>If you're not allowed do not try to change the ship's controls, especially the power level.</li>
+            <li>If you want to know how everything started. Elon Musk in 2016 did a presentation about humans becoming multiplanetary species and of course how the human transport to Mars turned financially possible. <a href="https://www.youtube.com/watch?v=H7Uyfqi_TE8&t=6s" target="_blank">Click Here</a></li>
+            <li>Want to know more about the planet we're going? <a href="https://en.wikipedia.org/wiki/Mars" target="_blank">Click Here</a></li>
+            <li>What happens to your body in space? <a href="https://www.nasa.gov/hrp/bodyinspace" target="_blank"> Click Here</a></li>
+        </ul>
+       
+    </div>
+    </div> <!-- ship information -->
        
     
      
