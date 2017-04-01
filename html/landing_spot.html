@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/css_space_project.css">
+  
+</head>
+ 
+ <body>
+    <nav id="navigation"> 
+       <ul>
+           <li class="selected" id="clockTitle">Landing Spot</li>
+           <li class="lastList"><a href="landing_spot.html">Landing Spot</a></li>
+           <li><a href="space_clock.html">Space Clock</a></li>
+           <li><a href="transport_system.html">Transport System</a></li>
+           <li><a href="../index.html">Home</a></li>
+        </ul>
+    </nav>
+     
+    <div id="landingPanel">
+        <div id="capeCanaveral">   
+          <div id="city"><h3>&nbsp;</h3></div>
+          <div id="temp"><h3>&nbsp;</h3></div>
+          <div id="wind"><h3>&nbsp;</h3></div>
+          <div id="windDirection"><h3>&nbsp;</h3></div>
+          <div id="elevation"><h3>&nbsp;</h3></div>
+          <div id="mapCape"></div>
+        </div>
+     
+        <div id="edwardsAFB">
+          <div id="city2"><h3>&nbsp;</h3></div>
+          <div id="temp2"><h3>&nbsp;</h3></div>
+          <div id="wind2"><h3>&nbsp;</h3></div>
+          <div id="windDirection2"><h3>&nbsp;</h3></div>
+          <div id="elevation2"><h3>&nbsp;</h3></div>
+          <div id="mapEdwards"></div>
+        </div>
+     
+        <div id="whiteSands">
+          <div id="city3"><h3>&nbsp;</h3></div>
+          <div id="temp3"><h3>&nbsp;</h3></div>
+          <div id="wind3"><h3>&nbsp;</h3></div>
+          <div id="windDirection3"><h3>&nbsp;</h3></div>
+          <div id="elevation3"><h3>&nbsp;</h3></div>
+          <div id="mapWhite"></div>
+        </div>     
+    </div><!-- landing panel -->
+     
+    <div id="informationLanding">
+        <h3>Information and Instructions</h3>
+        <ul>
+            <li>This interface was designed to track the conditions of landing spots which includes maps, weather conditions and elevation of land which are importants factors to consider when you're landing.</li>
+            <li>If you want to know how is the proccess to land the spaceship from space until Earth ground, a pilot from NASA gave a nice presentation about it. <a href="https://www.youtube.com/watch?v=Jb4prVsXkZU" target="_blank">Click Here</a></li>
+            <li>The three locations that we're monitoring  were used as landing sites for spaceships in the past. The White Sands is an emergency landing site use as a backup when the others are unavaiable. <a href="https://en.wikipedia.org/wiki/List_of_space_shuttle_landing_sites" target="_blank">Click Here</a></li>
+            <li>The maps are interactive and have a custom style. To switch styles between Satellite and Space just click in those options on the map. If any weather information is missing try to reload the page.</li>
+        </ul>        
+    </div><!-- information landing -->
+     
+         
+<!-- Google Maps Script -->
+<script type="text/javascript">
+    function initialize() {
+        var styles = [
+      {
+        stylers: [
+          { hue: "#00d4ff" },
+          { saturation: 40 },
+          { invert_lightness: true}
+        ]
+      },{
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          { lightness: 200 },
+          { visibility: "simplified" }
+        ]
+      },{
+        featureType: "road",
+        elementType: "labels",
+        stylers: [
+          { visibility: "on" }
+        ]
+      }
+    ];
+    
+    var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Space Style"});
+    
+    var latlng = new google.maps.LatLng(28.619775,-80.697639);
+    var latlng2 = new google.maps.LatLng(34.941341, -117.883288);
+    var latlng3 = new google.maps.LatLng(32.483690, -106.613991);
+    
+    var myOptions = {
+        zoom: 12,
+        center: latlng,
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.SATELLITE, 'map_style'] 
+        }  
+    };
+
+    var myOptions2 = {
+        zoom: 12,
+        center: latlng2,
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.SATELLITE, 'map_style'] 
+        }
+    };
+    
+    var myOptions3 = {
+        zoom: 12,
+        center: latlng3,
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.SATELLITE, 'map_style'] 
+        }
+    };
+
+    var map = new google.maps.Map(document.getElementById('mapCape'), myOptions);
+    var map2 = new google.maps.Map(document.getElementById("mapEdwards"), myOptions2);
+    var map3 = new google.maps.Map(document.getElementById("mapWhite"), myOptions3);
+    
+    var image = {
+        url: '/img/rocket.svg',
+        size: new google.maps.Size(32,32)
+    }
+
+    var myMarker = new google.maps.Marker(
+    {
+        position: latlng,
+        map: map,
+        title:"Cape Canaveral",
+        icon: image
+   });
+
+    var myMarker2 = new google.maps.Marker(
+    {
+        position: latlng2,
+        map: map2,
+        title:"Edwards AFB",
+        icon: image
+    });
+    
+    var myMarker3 = new google.maps.Marker(
+    {
+        position: latlng3,
+        map: map3,
+        title:"White Sands",
+        icon: image
+    });
+        
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+    map2.mapTypes.set('map_style', styledMap);
+    map2.setMapTypeId('map_style');
+    map3.mapTypes.set('map_style', styledMap);
+    map3.setMapTypeId('map_style'); 
+        
+    } // end function initialize //
+</script> <!-- END Google Maps Script -->
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://algorithmia.com/v1/clients/js/algorithmia-0.2.0.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6zMPujb3gDLjB92r1xj2Pnp0B7oyOBZw
+   &callback=initialize"></script>     
+  <script src="../js/script_landing_spot.js"></script>
+  <script src="../js/script_landing_spot_map2.js"></script>
+  
+  </body> 
+</html>

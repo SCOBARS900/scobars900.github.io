@@ -1,4 +1,4 @@
-//** Launch Countdown **//
+//*** Launch Countdown ***//
 var flagLaunch = false;
 var flagCountdown = true;
 var countDown = 10;
@@ -18,10 +18,9 @@ function launchCD() {
     flagLaunch = true;
     }
 }
+setInterval('launchCD()', 1000);
 
-var setCountdown = setInterval('launchCD()', 1000);
-
-//** Ship Controls **//
+//*** Ship Controls ***//
 
 // Throttle and Speed //
 var throttle = document.getElementById("throttle");
@@ -37,31 +36,29 @@ var flagSpeed = true;
 
 function startSpeed() {
     if (flagSpeed && flagLaunch) {
-    startingSpeed += 1.251;
-    currentThrottle += 100;
-    var startSpeedRounded = Math.round(startingSpeed * 1000) / 1000;
-    document.getElementById("speed").innerHTML = '<h4>Speed: ' + startSpeedRounded + ' km/s' + '</h4>';
-    throttle.innerHTML = '<h4>Throttle Power Level: ' + currentThrottle + ' units' + '</h4>';
-        if (startingSpeed >= 15 && currentThrottle >= 1200) {
-        document.getElementById("speed").innerHTML = '<h4>Speed: ' + defaultSpeed + ' km/s' + '</h4>';
+        startingSpeed += 1.251;
+        currentThrottle += 100;
+        var startSpeedRounded = Math.round(startingSpeed * 1000) / 1000;
+        document.getElementById("speed").innerHTML = '<h4>Speed: ' + startSpeedRounded + ' km/s' + '</h4>';
         throttle.innerHTML = '<h4>Throttle Power Level: ' + currentThrottle + ' units' + '</h4>';
-        flagSpeed = false;
+        if (startingSpeed >= 15 && currentThrottle >= 1200) {
+            document.getElementById("speed").innerHTML = '<h4>Speed: ' + defaultSpeed + ' km/s' + '</h4>';
+            throttle.innerHTML = '<h4>Throttle Power Level: ' + currentThrottle + ' units' + '</h4>';
+            flagSpeed = false;
         }
-    }
-      
+    }     
 }
-
-var startingSpeed = setInterval('startSpeed()', 1000);
+setInterval('startSpeed()', 1000);
 
 document.getElementById("plusThrottle").onclick = function () {
     if (flagLaunch) {
-    setTimeout('alert("Access denied. Only the captain can change the ship\'s commands");', 1);
+        setTimeout('alert("Access denied. Only the captain can change the ship\'s commands");', 1);
     }
-    }
+}
 
 document.getElementById("lessThrottle").onclick = function () {
     if (flagLaunch) {
-    setTimeout('alert("Access denied. Only the captain can change the ship\'s commands");', 1);
+        setTimeout('alert("Access denied. Only the captain can change the ship\'s commands");', 1);
     }
 }
 
@@ -71,26 +68,23 @@ document.getElementById("fuel").innerHTML = '<h4>Current Fuel: ' + totalFuel + '
 
 function fuel() {
     if (flagLaunch) {
-    var fuelRounded = Math.round(totalFuel * 1000) / 1000;
-    document.getElementById("fuel").innerHTML = '<h4>Current Fuel: ' + fuelRounded + ' tonnes' + '</h4>';
+        var fuelRounded = Math.round(totalFuel * 1000) / 1000;
+        document.getElementById("fuel").innerHTML = '<h4>Current Fuel: ' + fuelRounded + ' tonnes' + '</h4>';
     
-    if (totalFuel == 0) {
+        if (totalFuel == 0) {
         document.getElementById("fuel").innerHTML = '<h4>Fuel is Over</h4>';
-    } else {
+        } else {
         totalFuel -= (defaultSpeed * 3);
-    }  
+        }  
     }
 }
-
-
 var countdownFuel = setInterval('fuel()', 1000);
 
-// Acceleration (G-force) and Atmosphere and current location and gravity //
+// Acceleration (G-force), Atmosphere, current location, gravity //
 var flag2 = true;
 var earthGForce = 9.8;
 var spaceGForce = 0;
 var marsGforce = 3.8;
-
 
 var marsAtmosphere = "96% carbon dioxide 1.9% argon 1.9% nitrogen";
 
@@ -107,30 +101,25 @@ function gForceSpace() {
         document.getElementById("gravity").innerHTML = '<h4>Gravity: 0g</h4>';
         flag2 = false;
     }
-    if (seconds < 3.600) {
+    if (seconds < 3600) {
         document.getElementById("gForce").innerHTML = '<h4>Acceleration (G-force): ' + marsGforce + ' m/s<sup>2</sup>' + '</h4>';
         document.getElementById("atmosphere").innerHTML = '<h4>Atmosphere: ' + marsAtmosphere + '</h4>';
         document.getElementById("cLocation").innerHTML = '<h4>Current Location: Mars</h4>';
         document.getElementById("gravity").innerHTML = '<h4>Gravity: 0.376g</h4>';
-    }
-    
-    
-    
+    } 
 }
-
-var spaceAGForce = setInterval('gForceSpace()', 80000);
-
+setInterval('gForceSpace()', 90000);
 
 
-//** Time **//
 
-// if increase speed = minToArrive decrease ==> vice versa //
+//*** Time to Mars ***//
+
 /* Closest approach: 942 hours (39 days)
    Farthest approach: 6,944 hours (289 days)
    On average: 3,888 hours (162 days) */
 
-var minutesToArrive = 233280; 
-var seconds = minutesToArrive * 60;
+var minutesToArrive = 233280; // 233280/60 = 3888 hours --- 3888/60 = 162 days //
+var seconds = minutesToArrive * 60;  // 233280*60= 13996800 seconds //
 
 document.getElementById("timeToArrive").innerHTML = '<h4>Time to Mars: 162 days</h4>';
 
@@ -159,14 +148,10 @@ function travelTime() {
     }
     
 }
-
-
-    
-var countdownTime = setInterval('travelTime()', 1000);
+setInterval('travelTime()', 1000);
     
 
 //** Suplies **//
-
 var totalMeals = 1236000;
 var totalWater = 618000;
 document.getElementById('meal').innerHTML ="<h4>" + totalMeals + " Meals" + "</h4>";
@@ -198,9 +183,7 @@ function supplies() {
     }
     
 }
-
-
-var countdownSupplies = setInterval('supplies()', 10000);
+setInterval('supplies()', 10000);
 
 
 //** Distance **//
@@ -253,8 +236,7 @@ function distanceTraveled() {
     }
     }
 }
-
-var countDistance = setInterval('distanceTraveled()', 4000);
+setInterval('distanceTraveled()', 4000);
 
 
 

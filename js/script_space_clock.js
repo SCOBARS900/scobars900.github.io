@@ -28,7 +28,7 @@ var monthMars = ["Sagittarius", "Dhanus", "Capricornus", "Makara", "Aquarius", "
 
 
 function earthClock() {
-
+    
     dateOnEarth = "<br>" + "Earth" + "<br>" + monthNames[earthMonth] + " " + checkTime(earthDays) + " " + earthYear;
     
     timeOnEarth = checkTime(earthHours) + ":" + checkTime(earthMinutes) + ":" + checkTime(earthSeconds) + "<br>";
@@ -77,11 +77,10 @@ function earthClock() {
     } 
     
 }
+setInterval("earthClock()", 1000);
 
-var earthTick = setInterval("earthClock()", 1000);
 
 function marsClock() {
-
     dateOnMars = "Mars" + "<br>" + monthMars[marsMonth] + " " + checkTime(marsDays) + " " + checkYear(marsYear);
     
     timeOnMars = checkTime(marsHours) + ":" + checkTime(marsMinutes) + ":" + checkTime(marsSeconds);
@@ -123,8 +122,7 @@ function marsClock() {
     } 
     
 }
-
-var marsTick = setInterval("marsClock()", 1027);
+setInterval("marsClock()", 1027);
 
 
 

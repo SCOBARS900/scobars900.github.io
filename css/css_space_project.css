@@ -1,9 +1,12 @@
-body {
+html, body {
     background-image: url(../img/blackBackground.jpg);
     color: white;
     text-align: center;
     font-family: monospace;
     font-size: 1em;
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
 }
 
 h1 {
@@ -12,7 +15,6 @@ h1 {
 
 h2 {
   font-size: 22px;
-  font-weight: 900;
 }
 
 h4 {
@@ -25,7 +27,6 @@ h5 {
 
 p {
     font-size: 18px;
-    font-weight: 900 !important;
 }
 
 a {
@@ -73,6 +74,9 @@ li {
     margin-right: 35px;
 }
 
+
+
+/*** Transport System Page ***/
 .button {
     background-color: transparent;
     border-style: solid;
@@ -84,7 +88,6 @@ li {
     font-size: 15px;
 }
 
-/* Transport System Interface */
 #shipInterface {
     height: 460px;
     width: 1000px;
@@ -145,24 +148,14 @@ li {
     margin-top: 10px;
 }
     
-
-
 #redButton {
   width: 48px;
   
 }
 
-#lsInterface {
-    text-align: left;
-}
-
-#lsGetReady {
-    text-align: left;
-}
-
-/* Clock Page */
 
 
+/*** Space Clock Page ***/
 
 #clock {
     margin-left: auto;
@@ -180,8 +173,7 @@ li {
     border-radius: 500px;
     animation-name: none;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
-    
+    animation-iteration-count: infinite;  
 }
 
 .planets {
@@ -209,10 +201,12 @@ li {
 #star {
     width: 64px;
     height: 64px;
+    margin-top: 6px;
+    margin-bottom: 2px
 }
 
 #earthDate {
-    margin-top: 12px
+    margin-top: 14px;
 }
 
 #informationClock {
@@ -224,8 +218,7 @@ li {
     width: 1300px;
     font-weight: 900 !important; 
     border-style: solid;
-    border-width: 4px;
-    
+    border-width: 4px;  
 }
 
 #imageEarth {
@@ -244,23 +237,100 @@ li {
 
 
 #iconMercury, #iconVenus, #iconEarth, #iconMoon, #iconMars, #iconMoon, #iconJupiter, #iconSaturn, #iconUranus, #iconNeptune, #iconPluto {
-    -webkit-transition: 1.5s ease-in-out;
-    -moz-transition: 1.5s ease-in-out;
-    -o-transition: 1.5s ease-in-out;
-    transition: 1.5s ease-in-out;
-    
+        -webkit-transition: 1.5s ease-in-out;
+        -moz-transition: 1.5s ease-in-out;
+        -o-transition: 1.5s ease-in-out;
+        transition: 1.5s ease-in-out;
 }
 
 #iconMercury:hover, #iconVenus:hover, #iconEarth:hover, #iconMoon:hover, #iconMars:hover, #iconJupiter:hover, #iconSaturn:hover, #iconUranus:hover, #iconNeptune:hover, #iconPluto:hover {
-     -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
 }
 
 
 
+/*** Landing Spot Page ***/
+#landingPanel {
+    height: 460px;
+    width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+#landingPanel h3 {
+    font-size: 17px;
+}
 
+#capeCanaveral {
+    height: 450px;
+    width: 380px;
+    margin-left: 27px;
+    border-style: solid;
+    border-color: #00d4ff;
+    border-width: 4px;
+    border-radius: 40px;
+}
 
+#edwardsAFB {
+    height: 450px;
+    width: 380px;
+    margin-top: -457px;
+    margin-left: 439px;
+    border-style: solid;
+    border-color: #00d4ff;
+    border-width: 4px;
+    border-radius: 40px;
+}
+
+#whiteSands {
+    height: 450px;
+    width: 380px;
+    margin-top: -457px;
+    margin-left: 848px;
+    border-style: solid;
+    border-color: #00d4ff;
+    border-width: 4px;
+    border-radius: 40px;
+}
+
+#mapCape { 
+    height: 232px;
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;  
+}
+
+#mapEdwards {
+    height: 232px;
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+#mapWhite {
+    height: 232px;
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+#informationLanding {
+    font-size: 16px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 260px;
+    width: 1300px;
+    font-weight: 900 !important; 
+    border-style: solid;
+    border-width: 4px;   
+}
