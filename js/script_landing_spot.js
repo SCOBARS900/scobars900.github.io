@@ -24,7 +24,7 @@ $.ajax({
       $('#windDirection').html('<h3>Wind Direction ' + mainWindD + '°</h3>');
       
    },
-   type: 'GET'
+   type: 'POST'
 });
 
 $.ajax({
@@ -51,7 +51,7 @@ $.ajax({
       $('#windDirection2').html('<h3>Wind Direction ' + mainWindD2 + '°</h3>');
 
    },
-   type: 'GET'  
+   type: 'POST'  
 });
 
 $.ajax({
@@ -78,7 +78,7 @@ $.ajax({
       $('#windDirection3').html('<h3>Wind Direction ' + mainWindD3 + '°</h3>');
 
    },
-   type: 'GET'
+   type: 'POST'
 });
 
 $('#city2').html('<h2>Edwards Air Force Base, US</h2');
