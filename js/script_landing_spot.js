@@ -1,6 +1,6 @@
 //*** Open Weather API ***//
 $.ajax({
-   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=28.46&lon=-80.56' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
+   url: '//api.openweathermap.org/data/2.5/weather?' + 'lat=28.46&lon=-80.56' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
    data: {
       format: 'json'
    },
@@ -24,11 +24,11 @@ $.ajax({
       $('#windDirection').html('<h3>Wind Direction ' + mainWindD + '°</h3>');
       
    },
-   type: 'POST'
+   type: 'GET'
 });
 
 $.ajax({
-   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=35&lon=-118' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
+   url: '//api.openweathermap.org/data/2.5/weather?' + 'lat=35&lon=-118' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
    data: {
       format: 'json'
    },
@@ -51,11 +51,11 @@ $.ajax({
       $('#windDirection2').html('<h3>Wind Direction ' + mainWindD2 + '°</h3>');
 
    },
-   type: 'POST'  
+   type: 'GET'  
 });
 
 $.ajax({
-   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=32.48&lon=-106.61' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
+   url: '//api.openweathermap.org/data/2.5/weather?' + 'lat=32.48&lon=-106.61' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
    data: {
       format: 'json'
    },
@@ -78,7 +78,7 @@ $.ajax({
       $('#windDirection3').html('<h3>Wind Direction ' + mainWindD3 + '°</h3>');
 
    },
-   type: 'POST'
+   type: 'GET'
 });
 
 $('#city2').html('<h2>Edwards Air Force Base, US</h2');
