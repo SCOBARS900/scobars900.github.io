@@ -1,11 +1,11 @@
 //*** Open Weather API ***//
 $.ajax({
-   url: '//api.openweathermap.org/data/2.5/weather?' + 'lat=28.46&lon=-80.56' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
+   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=28.46&lon=-80.56' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
    data: {
       format: 'json'
    },
    error: function() {
-      $('#city').html('<h2>An error has occurred</h2>');
+      $('#temp').html('<h3>An error has occurred</h3>');
    },
    dataType: 'jsonp',
            
@@ -18,7 +18,6 @@ $.ajax({
        mainWind = data.wind.speed;
        mainWindD = data.wind.deg;
        
-      $('#city').html('<h2>' + cityName + ", " + countryCode + '</h2');
       $('#temp').html('<h3>' + mainTempD + '°C ' + weatherMain + '</h3>');
       $('#wind').html('<h3>Wind Speed ' + mainWind + ' m/s</h3>');
       $('#windDirection').html('<h3>Wind Direction ' + mainWindD + '°</h3>');
@@ -28,12 +27,12 @@ $.ajax({
 });
 
 $.ajax({
-   url: '//api.openweathermap.org/data/2.5/weather?' + 'lat=35&lon=-118' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
+   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=35&lon=-118' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
    data: {
       format: 'json'
    },
    error: function() {
-      $('#city2').html('<h2>An error has occurred</h2>');
+      $('#temp2').html('<h3>An error has occurred</h3>');
    },
    dataType: 'jsonp',
            
@@ -55,12 +54,12 @@ $.ajax({
 });
 
 $.ajax({
-   url: '//api.openweathermap.org/data/2.5/weather?' + 'lat=32.48&lon=-106.61' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
+   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=32.48&lon=-106.61' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
    data: {
       format: 'json'
    },
    error: function() {
-      $('#city3').html('<h2>An error has occurred</h2>');
+      $('#temp3').html('<h3>An error has occurred</h3>');
    },
    dataType: 'jsonp',
            
@@ -81,8 +80,6 @@ $.ajax({
    type: 'GET'
 });
 
-$('#city2').html('<h2>Edwards Air Force Base, US</h2');
-$('#city3').html('<h2>White Sands, US</h2');
 
 
 //*** Elevation API ***//
