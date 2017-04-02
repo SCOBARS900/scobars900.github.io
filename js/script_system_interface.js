@@ -52,13 +52,13 @@ setInterval('startSpeed()', 1000);
 
 document.getElementById("plusThrottle").onclick = function () {
     if (flagLaunch) {
-        setTimeout('alert("Access denied. Only the captain can change the ship\'s commands");', 1);
+        alert("Access denied. Only the captain can change the ship\'s commands");
     }
 }
 
 document.getElementById("lessThrottle").onclick = function () {
     if (flagLaunch) {
-        setTimeout('alert("Access denied. Only the captain can change the ship\'s commands");', 1);
+        alert("Access denied. Only the captain can change the ship\'s commands");
     }
 }
 
