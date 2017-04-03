@@ -74,13 +74,89 @@ li {
     margin-right: 35px;
 }
 
+/*** Home Page ***/
+
+#panelHome {
+    width: 1300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 40px;
+    margin-top: 40px;
+    border-color: transparent;
+    
+}
+
+#infoHome h2 {
+    color: deepskyblue;
+}
+
+#infoHome li {
+    margin-right: 7px;
+}
+
+#transportHome {
+    height: 430px;
+    width: 400px;
+    border-style: solid;
+    border-color:deepskyblue;
+    border-radius: 40px;
+    border-width: 4px;
+    margin-top: 50px;
+    
+}
+
+#spaceHome {
+    height: 430px;
+    width: 400px;
+    border-style: solid;
+    border-color:deepskyblue;
+    border-radius: 40px;
+    border-width: 4px;
+    margin-left: 450px;
+    margin-top: -437px;
+}
+
+#landingHome {
+    height: 430px;
+    width: 400px;
+    border-style: solid;
+    border-color:deepskyblue;
+    border-radius: 40px;
+    border-width: 4px;
+    margin-left: 892px;
+    margin-top: -437px;
+}
+
+#rocketHome {
+    width: 140px;
+    height: 140px;
+    margin-top: 20px;
+}
+
+#clockHome {
+    width: 140px;
+    height: 140px;
+    padding-right: 300px;
+    padding-left: 300px
+    
+}
+
+#targetHome {
+    width: 140px;
+    height: 140px;
+    
+}
+
 
 
 /*** Transport System Page ***/
 .button {
     background-color: transparent;
     border-style: solid;
-    border-color: orange;
+    border-color: deepskyblue;
     border-width: 2px;
     border-radius: 500px;
     color: white;
@@ -101,7 +177,7 @@ li {
     height: 450px;
     width: 450px;
     border-style: solid;
-    border-color: orange;
+    border-color: deepskyblue;
     border-width: 4px;
     color: white;
     margin-left: 30px
@@ -120,7 +196,7 @@ li {
     height: 450px;
     width: 450px;
     border-style: solid;
-    border-color: orange;
+    border-color: deepskyblue;
     border-width: 4px;
     color: white;
     margin-top: -458px;
@@ -151,6 +227,7 @@ li {
 #redButton {
   width: 48px;
   
+  
 }
 
 
@@ -165,7 +242,7 @@ li {
     font-size: 25px;
     font-weight: 900 !important; 
     border-style: solid;
-    border-left-color: #66FF66;
+    border-left-color: #66FF66; 
     border-top-color: aqua;
     border-right-color: #FF9933;
     border-bottom-color: #FFFF66;
@@ -272,7 +349,7 @@ li {
     width: 380px;
     margin-left: 27px;
     border-style: solid;
-    border-color: #00d4ff;
+    border-color: deepskyblue;
     border-width: 4px;
     border-radius: 40px;
 }
@@ -283,7 +360,7 @@ li {
     margin-top: -457px;
     margin-left: 439px;
     border-style: solid;
-    border-color: #00d4ff;
+    border-color: deepskyblue;
     border-width: 4px;
     border-radius: 40px;
 }
@@ -294,7 +371,7 @@ li {
     margin-top: -457px;
     margin-left: 848px;
     border-style: solid;
-    border-color: #00d4ff;
+    border-color: deepskyblue;
     border-width: 4px;
     border-radius: 40px;
 }
