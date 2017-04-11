@@ -97,56 +97,37 @@ li {
     margin-right: 7px;
 }
 
-#transportHome {
-    height: 430px;
-    width: 400px;
+#infoHome {
+    height: auto;
+    width: 1300px;
     border-style: solid;
     border-color:deepskyblue;
     border-radius: 40px;
     border-width: 4px;
-    margin-top: 50px;
-    
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-#spaceHome {
-    height: 430px;
-    width: 400px;
-    border-style: solid;
-    border-color:deepskyblue;
-    border-radius: 40px;
-    border-width: 4px;
-    margin-left: 450px;
-    margin-top: -437px;
-}
 
-#landingHome {
-    height: 430px;
-    width: 400px;
-    border-style: solid;
-    border-color:deepskyblue;
-    border-radius: 40px;
-    border-width: 4px;
-    margin-left: 892px;
-    margin-top: -437px;
-}
 
 #rocketHome {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     margin-top: 20px;
 }
 
 #clockHome {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     padding-right: 300px;
     padding-left: 300px
     
 }
 
 #targetHome {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     
 }
 
@@ -160,55 +141,56 @@ li {
     border-width: 2px;
     border-radius: 500px;
     color: white;
-    width: 100px;
-    font-size: 15px;
+    width: 120px;
+    font-size: 16px;
 }
 
 #shipInterface {
-    height: 460px;
-    width: 1000px;
+    height: auto;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 80px;
     
 }
 
 #shipControls {
     border-radius: 500px;
-    height: 450px;
-    width: 450px;
+    height: 520px;
+    width: 520px;
     border-style: solid;
     border-color: deepskyblue;
     border-width: 4px;
     color: white;
-    margin-left: 30px
+    margin-left: 60px;
 }
 
 #shipControls h2 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #shipControls h4 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #shipEnvironment {
     border-radius: 500px;
-    height: 450px;
-    width: 450px;
+    height: 520px;
+    width: 520px;
     border-style: solid;
     border-color: deepskyblue;
     border-width: 4px;
     color: white;
-    margin-top: -458px;
-    margin-left: 510px;
+    margin-top: -528px;
+    margin-left: 610px;
 }
 
 #shipEnvironment h2 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #shipEnvironment h4 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #shipInformation {
@@ -225,7 +207,7 @@ li {
 }
     
 #redButton {
-  width: 48px;
+  width: 64px;
   
   
 }
@@ -237,9 +219,9 @@ li {
 #clock {
     margin-left: auto;
     margin-right: auto;
-    height: 350px;
-    width: 350px;
-    font-size: 25px;
+    height: 500px;
+    width: 500px;
+    font-size: 30px;
     font-weight: 900 !important; 
     border-style: solid;
     border-left-color: #66FF66; 
@@ -254,7 +236,8 @@ li {
 }
 
 .planets {
-    width: 96px;
+    margin-top: 20px;
+    width: 110px;
 }
 
 @keyframes pulseClock {
@@ -276,14 +259,14 @@ li {
 }
 
 #star {
-    width: 64px;
-    height: 64px;
-    margin-top: 6px;
-    margin-bottom: 2px
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 16px
 }
 
 #earthDate {
-    margin-top: 14px;
+    margin-top: 40px;
 }
 
 #informationClock {
@@ -332,22 +315,22 @@ li {
 
 /*** Landing Spot Page ***/
 #landingPanel {
-    height: 460px;
+    height: auto;
     width: 1260px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 60px;
     margin-bottom: 10px;
 }
 
 #landingPanel h3 {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 #capeCanaveral {
-    height: 450px;
-    width: 380px;
-    margin-left: 27px;
+    height: 600px;
+    width: 580px;
+    margin-left: 30px;
     border-style: solid;
     border-color: deepskyblue;
     border-width: 4px;
@@ -355,50 +338,34 @@ li {
 }
 
 #edwardsAFB {
-    height: 450px;
-    width: 380px;
-    margin-top: -457px;
-    margin-left: 439px;
+    height: 600px;
+    width: 580px;
+    margin-top: -608px;
+    margin-left: 645px;
     border-style: solid;
     border-color: deepskyblue;
     border-width: 4px;
     border-radius: 40px;
 }
 
-#whiteSands {
-    height: 450px;
-    width: 380px;
-    margin-top: -457px;
-    margin-left: 848px;
-    border-style: solid;
-    border-color: deepskyblue;
-    border-width: 4px;
-    border-radius: 40px;
-}
 
 #mapCape { 
-    height: 232px;
-    width: 335px;
+    height: 350px;
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;  
 }
 
 #mapEdwards {
-    height: 232px;
-    width: 335px;
+    height: 350px;
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
 }
 
-#mapWhite {
-    height: 232px;
-    width: 335px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-}
+
 
 #informationLanding {
     font-size: 16px;

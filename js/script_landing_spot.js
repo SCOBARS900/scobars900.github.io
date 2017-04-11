@@ -53,34 +53,6 @@ $.ajax({
    type: 'GET'  
 });
 
-$.ajax({
-   url: 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=32.48&lon=-106.61' + '&units=metric' + '&APPID=703e76ae816765cc4a4c82ffeb2b2a6a',
-   data: {
-      format: 'json'
-   },
-   error: function() {
-      $('#temp3').html('<h3>An error has occurred</h3>');
-   },
-   dataType: 'jsonp',
-           
-   success: function(data) {
-       cityName3 = data.name;
-       countryCode3 = data.sys.country;
-       weatherMain3 = data.weather[0].main;
-       mainTemp3 = data.main.temp;
-       mainTempD3 = Math.round(mainTemp3);
-       mainWind3 = data.wind.speed;
-       mainWindD3 = data.wind.deg;
-       
-      $('#temp3').html('<h3>' + mainTempD3 + '°C ' + weatherMain3 + '</h3>');
-      $('#wind3').html('<h3>Wind Speed ' + mainWind3 + ' m/s</h3>');
-      $('#windDirection3').html('<h3>Wind Direction ' + mainWindD3 + '°</h3>');
-
-   },
-   type: 'GET'
-});
-
-
 
 //*** Elevation API ***//
 
@@ -94,10 +66,7 @@ var edwardsAFB = {
     "lon": "-117.883288"
 };
 
-var whiteSands = {
-    "lat": "32.484196",
-    "lon": "-106.613991"
-};
+
 
 Algorithmia.client("simDtGPuO7WJ1xEz+PX205XP1Cg1")
            .algo("algo://Gaploid/Elevation/0.3.6")
@@ -113,12 +82,7 @@ Algorithmia.client("simDtGPuO7WJ1xEz+PX205XP1Cg1")
            $("#elevation2").html('<h3>Elevation: ' + data2.result.slice(11, -3) + '</h3>');
            });
 
-Algorithmia.client("simDtGPuO7WJ1xEz+PX205XP1Cg1")
-           .algo("algo://Gaploid/Elevation/0.3.6")
-           .pipe(whiteSands)
-           .then(function(data3) {
-           $("#elevation3").html('<h3>Elevation: ' + data3.result.slice(11, -3) + '</h3>');
-           });
+
 
 
 

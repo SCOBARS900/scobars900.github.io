@@ -38,25 +38,10 @@
           <div id="mapEdwards"></div>
         </div>
      
-        <div id="whiteSands">
-          <div id="city3"><h2>White Sands, US</h2></div>
-          <div id="temp3"><h3>&nbsp;</h3></div>
-          <div id="wind3"><h3>&nbsp;</h3></div>
-          <div id="windDirection3"><h3>&nbsp;</h3></div>
-          <div id="elevation3"><h3>&nbsp;</h3></div>
-          <div id="mapWhite"></div>
-        </div>     
+            
     </div><!-- landing panel -->
      
-    <div id="informationLanding">
-        <h3>Information and Instructions</h3>
-        <ul>
-            <li>This interface was designed to track the conditions of landing spots which includes maps, weather conditions and elevation of land which are importants factors to consider when you're landing.</li>
-            <li>If you want to know how is the proccess to land the spaceship from space until Earth ground, a pilot from NASA gave a nice presentation about it. <a href="https://www.youtube.com/watch?v=Jb4prVsXkZU" target="_blank">Click Here</a></li>
-            <li>The three locations that we're monitoring  were used as landing sites for spaceships in the past. The White Sands is an emergency landing site use as a backup when the others are unavaiable. <a href="https://en.wikipedia.org/wiki/List_of_space_shuttle_landing_sites" target="_blank">Click Here</a></li>
-            <li>The maps are interactive and have a custom style. To switch styles between Satellite and Space just click in those options on the map. If any weather information is missing try to reload the page.</li>
-        </ul>        
-    </div><!-- information landing -->
+    
      
          
 <!-- Google Maps Script -->
@@ -90,7 +75,7 @@
     
     var latlng = new google.maps.LatLng(28.619775,-80.697639);
     var latlng2 = new google.maps.LatLng(34.941341, -117.883288);
-    var latlng3 = new google.maps.LatLng(32.483690, -106.613991);
+    
     
     var myOptions = {
         zoom: 12,
@@ -108,17 +93,11 @@
         }
     };
     
-    var myOptions3 = {
-        zoom: 12,
-        center: latlng3,
-        mapTypeControlOptions: {
-          mapTypeIds: [google.maps.MapTypeId.SATELLITE, 'map_style'] 
-        }
-    };
+    
 
     var map = new google.maps.Map(document.getElementById('mapCape'), myOptions);
     var map2 = new google.maps.Map(document.getElementById("mapEdwards"), myOptions2);
-    var map3 = new google.maps.Map(document.getElementById("mapWhite"), myOptions3);
+    
     
     var image = {
         url: '/img/rocket.svg',
@@ -141,20 +120,13 @@
         icon: image
     });
     
-    var myMarker3 = new google.maps.Marker(
-    {
-        position: latlng3,
-        map: map3,
-        title:"White Sands",
-        icon: image
-    });
+    
         
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
     map2.mapTypes.set('map_style', styledMap);
     map2.setMapTypeId('map_style');
-    map3.mapTypes.set('map_style', styledMap);
-    map3.setMapTypeId('map_style'); 
+   
         
     } // end function initialize //
 </script> <!-- END Google Maps Script -->
