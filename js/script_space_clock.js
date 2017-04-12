@@ -173,6 +173,11 @@ document.getElementById("star").onclick = function () {
     }
 }
 
+
+TweenMax.staggerTo(".fox", 1, {rotation:360, y:1}, 0.5);
+
+
+
 document.getElementById("iconMercury").onclick = function () {              document.getElementById("clock").style.backgroundImage =              "url(../img/mercuryB.svg)";
      document.getElementById("clock").style.borderColor = "#FF355E";
      document.getElementById("clock").style.color = "white";
