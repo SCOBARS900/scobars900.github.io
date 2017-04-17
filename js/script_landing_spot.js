@@ -5,22 +5,22 @@ $.ajax({
       format: 'json'
    },
    error: function() {
-      $('#temp').html('<h3>An error has occurred</h3>');
+      document.getElementById("temp").innerHTML = '<h3>An error has occurred</h3>';
    },
    dataType: 'jsonp',
            
    success: function(data) {
-       cityName = data.name;
-       countryCode = data.sys.country;
        weatherMain = data.weather[0].main;
        mainTemp = data.main.temp;
        mainTempD = Math.round(mainTemp);
        mainWind = data.wind.speed;
        mainWindD = data.wind.deg;
        
-      $('#temp').html('<h3>' + mainTempD + '°C ' + weatherMain + '</h3>');
-      $('#wind').html('<h3>Wind Speed ' + mainWind + ' m/s</h3>');
-      $('#windDirection').html('<h3>Wind Direction ' + mainWindD + '°</h3>');
+    
+       document.getElementById("temp").innerHTML = '<h3>' + mainTempD + '°C ' + weatherMain + '</h3>';
+       document.getElementById("wind").innerHTML = '<h3>Wind Speed ' + mainWind + ' m/s</h3>';
+       document.getElementById("windDirection").innerHTML = '<h3>Wind Direction ' + mainWindD + '°</h3>';
+     
       
    },
    type: 'GET'
@@ -32,22 +32,20 @@ $.ajax({
       format: 'json'
    },
    error: function() {
-      $('#temp2').html('<h3>An error has occurred</h3>');
+      document.getElementById("temp2").innerHTML = '<h3>An error has occurred</h3>';
    },
    dataType: 'jsonp',
            
    success: function(data) {
-       cityName2 = data.name;
-       countryCode2 = data.sys.country;
        weatherMain2 = data.weather[0].main;
        mainTemp2 = data.main.temp;
        mainTempD2 = Math.round(mainTemp2);
        mainWind2 = data.wind.speed;
        mainWindD2 = data.wind.deg;
        
-      $('#temp2').html('<h3>' + mainTempD2 + '°C ' + weatherMain2 + '</h3>');
-      $('#wind2').html('<h3>Wind Speed ' + mainWind2 + ' m/s</h3>');
-      $('#windDirection2').html('<h3>Wind Direction ' + mainWindD2 + '°</h3>');
+      document.getElementById("temp2").innerHTML ='<h3>' + mainTempD2 + '°C ' + weatherMain2 + '</h3>';
+      document.getElementById("wind2").innerHTML ='<h3>Wind Speed ' + mainWind2 + ' m/s</h3>';
+      document.getElementById("windDirection2").innerHTML ='<h3>Wind Direction ' + mainWindD2 + '°</h3>';
 
    },
    type: 'GET'  
